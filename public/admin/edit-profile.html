@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Edit Profil — Destroyer Admin</title>
+  <meta name="description" content="Edit profil admin Destroyer Community." />
+
+  <link rel="icon" href="/public/img/favicon.ico" />
+  <link rel="stylesheet" href="/public/css/style.css" />
+  <link rel="stylesheet" href="/public/css/animations.css" />
+  <link rel="stylesheet" href="/public/css/admin.css" />
+</head>
+<body class="page-admin">
+
+  <!-- ============ ADMIN NAVBAR ============ -->
+  <nav class="admin-nav">
+    <a href="/" class="nav-logo">
+      <img src="/public/img/logo.png" alt="Destroyer" />
+      <span class="nav-title">DESTROYER</span>
+      <span class="admin-badge">ADMIN</span>
+    </a>
+
+    <button class="nav-toggle" aria-label="Menu">☰</button>
+
+    <ul class="nav-links">
+      <li><a href="/admin/dashboard.html">Dashboard</a></li>
+      <li><a href="/admin/edit-profile.html" class="active">Edit Profil</a></li>
+      <li><a href="#" id="logoutBtn" class="nav-logout">Logout</a></li>
+    </ul>
+  </nav>
+
+  <!-- ============ PAGE HEADER ============ -->
+  <section class="page-header admin-header">
+    <h1>Edit Profil</h1>
+    <p>Ganti data profil kamu yang tampil di website</p>
+  </section>
+
+  <!-- ============ FORM ============ -->
+  <section class="section">
+    <div class="admin-form-box">
+      <form id="editProfileForm" class="admin-form">
+
+        <!-- ============ PREVIEW AVATAR ============ -->
+        <div class="form-group avatar-group">
+          <label>Avatar</label>
+          <div class="avatar-preview-wrap">
+            <div class="avatar-preview" id="avatarPreview">D</div>
+            <p class="hint">
+              Avatar pakai huruf pertama dari gamer tag kamu.
+            </p>
+          </div>
+        </div>
+
+        <!-- ============ GAMER TAG ============ -->
+        <div class="form-group">
+          <label for="gamerTag">Gamer Tag *</label>
+          <input
+            id="gamerTag"
+            type="text"
+            placeholder="Nama tampilan kamu"
+            maxlength="20"
+            required
+          />
+          <p class="hint">Nama yang muncul di kartu member &amp; video.</p>
+        </div>
+
+        <!-- ============ DISPLAY NAME ============ -->
+        <div class="form-group">
+          <label for="displayName">Display Name (opsional)</label>
+          <input
+            id="displayName"
+            type="text"
+            placeholder="Nama lengkap / panggilan"
+            maxlength="30"
+          />
+        </div>
+
+        <!-- ============ BIO ============ -->
+        <div class="form-group">
+          <label for="bio">Bio</label>
+          <textarea
+            id="bio"
+            placeholder="Ceritain dikit tentang kamu..."
+            maxlength="150"
+            rows="3"
+          ></textarea>
+          <p class="hint">
+            <span id="bioCount">0</span> / 150 karakter
+          </p>
+        </div>
+
+        <!-- ============ GAMES ============ -->
+        <div class="form-group">
+          <label>Game yang Dimainin</label>
+          <div class="checkbox-group">
+            <label class="checkbox">
+              <input type="checkbox" value="Any Game" class="game-check" />
+              <span>🎮 Any Game</span>
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" value="Co-op / PvP" class="game-check" />
+              <span>🤝 Co-op / PvP</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- ============ SOSMED ============ -->
+        <div class="form-group">
+          <label for="tiktokUrl">Link TikTok</label>
+          <input
+            id="tiktokUrl"
+            type="url"
+            placeholder="https://tiktok.com/@akunkamu"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="instagramUrl">Link Instagram</label>
+          <input
+            id="instagramUrl"
+            type="url"
+            placeholder="https://instagram.com/akunkamu"
+          />
+        </div>
+
+        <!-- ============ ERROR ============ -->
+        <p class="auth-error" id="formError" style="display:none;"></p>
+
+        <!-- ============ SUBMIT ============ -->
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary" id="submitBtn">
+            💾 Simpan Perubahan
+          </button>
+          <a href="/admin/dashboard.html" class="btn btn-outline">
+            Batal
+          </a>
+        </div>
+
+      </form>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer>
+    <div class="footer-bottom">
+      <p>© <span class="year"></span> Destroyer Community — Admin Panel</p>
+    </div>
+  </footer>
+
+  <!-- ============ SCRIPTS ============ -->
+  <script src="/public/js/config.js"></script>
+  <script src="/public/js/main.js"></script>
+  <script src="/public/js/admin.js"></script>
+  <script src="/public/js/edit-profile.js"></script>
+
+</body>
+</html>

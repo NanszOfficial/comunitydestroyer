@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Community — Destroyer Community</title>
+  <meta name="description" content="Update komunitas dan cerita terbaru tentang kami berdua." />
+
+  <link rel="icon" href="/public/img/favicon.ico" />
+  <link rel="stylesheet" href="/public/css/style.css" />
+  <link rel="stylesheet" href="/public/css/animations.css" />
+</head>
+<body class="forum-page">
+
+  <!-- ============ NAVBAR ============ -->
+  <nav>
+    <a href="/" class="nav-logo">
+      <img src="/public/img/logo.png" alt="Destroyer" />
+      <span class="nav-title">DESTROYER</span>
+    </a>
+
+    <button class="nav-toggle" aria-label="Menu">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="3" y1="6" x2="21" y2="6"/>
+        <line x1="3" y1="12" x2="21" y2="12"/>
+        <line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+    </button>
+
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/public/about.html">About</a></li>
+      <li><a href="/public/community.html" class="active">Community</a></li>
+      <li><a href="/public/gallery.html">Gallery</a></li>
+      <li><a href="/public/feedback.html">Feedback</a></li>
+      <li><a href="/public/login.html" class="nav-login">Admin</a></li>
+    </ul>
+  </nav>
+
+  <main class="forum-shell">
+    <header class="forum-heading">
+      <div>
+        <p class="forum-kicker">DESTROYER COMMUNITY</p>
+        <h1>Forum Komunitas</h1>
+        <p>Obrolan terbaru seputar game dan mabar.</p>
+      </div>
+      <a href="/public/join.html" class="btn btn-primary">Gabung Squad</a>
+    </header>
+
+    <div class="forum-layout">
+      <section class="forum-main" aria-labelledby="forumTopicsTitle">
+        <div class="forum-board-head">
+          <div>
+            <p class="forum-kicker">COMMUNITY BOARD</p>
+            <h2 id="forumTopicsTitle">Diskusi terbaru</h2>
+          </div>
+          <span id="communityPostCount" class="forum-count" aria-live="polite">Memuat...</span>
+        </div>
+        <div id="communityFeed" class="community-feed forum-thread-list" aria-live="polite"></div>
+      </section>
+
+      <aside class="forum-sidebar" aria-label="Info komunitas">
+        <section class="forum-panel">
+          <p class="forum-kicker">RUANG KOMUNITAS</p>
+          <h2>Ngobrol, lalu mabar.</h2>
+          <p>Tempat berbagi cerita bermain, kabar squad, dan rencana main bareng.</p>
+          <a href="/public/join.html" class="forum-panel-link">Lihat cara bergabung <span aria-hidden="true">→</span></a>
+        </section>
+
+        <section class="forum-panel forum-panel-secondary">
+          <p class="forum-kicker">JELAJAHI</p>
+          <a href="/public/gallery.html">Galeri komunitas <span aria-hidden="true">→</span></a>
+          <a href="/public/feedback.html">Kirim masukan <span aria-hidden="true">→</span></a>
+        </section>
+      </aside>
+    </div>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-brand">
+        <img src="/public/img/logo.png" alt="Destroyer" />
+        <p>Destroyer Community</p>
+        <p class="footer-tagline">Two Gamers. One Squad.</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Menu</h4>
+        <a href="/public/about.html">About</a>
+        <a href="/public/community.html">Community</a>
+        <a href="/public/gallery.html">Gallery</a>
+      </div>
+
+      <div class="footer-links">
+        <h4>Sosmed</h4>
+        <a href="#" id="footerDiscord" target="_blank" rel="noopener">Discord</a>
+        <a href="#" id="footerTiktok" target="_blank" rel="noopener">TikTok</a>
+        <a href="#" id="footerInstagram" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© <span class="year"></span> Destroyer Community — Made with 
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;color:#ff4444;">
+          <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+        </svg>
+      </p>
+    </div>
+  </footer>
+
+  <!-- ============ SCRIPTS ============ -->
+  <script src="/public/js/config.js"></script>
+  <script src="/public/js/main.js"></script>
+  <script src="/public/js/api.js"></script>
+  <script src="/public/js/community.js"></script>
+
+</body>
+</html>

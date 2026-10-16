@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kelola Community — Destroyer Admin</title>
+  <meta name="description" content="Kelola postingan Community Destroyer." />
+
+  <link rel="icon" href="/public/img/favicon.ico" />
+  <link rel="stylesheet" href="/public/css/style.css" />
+  <link rel="stylesheet" href="/public/css/animations.css" />
+  <link rel="stylesheet" href="/public/css/admin.css" />
+</head>
+<body class="page-admin">
+  <nav class="admin-nav">
+    <a href="/" class="nav-logo">
+      <img src="/public/img/logo.png" alt="Destroyer" />
+      <span class="nav-title">DESTROYER</span>
+      <span class="admin-badge">ADMIN</span>
+    </a>
+    <button class="nav-toggle" aria-label="Menu">☰</button>
+    <ul class="nav-links">
+      <li><a href="/admin/dashboard.html">Dashboard</a></li>
+      <li><a href="/admin/community.html" class="active">Community</a></li>
+      <li><a href="/admin/edit-profile.html">Edit Profil</a></li>
+      <li><a href="#" id="logoutBtn" class="nav-logout">Logout</a></li>
+    </ul>
+  </nav>
+
+  <section class="page-header admin-header">
+    <h1>Community</h1>
+    <p>Terbitkan update dan kelola cerita komunitas.</p>
+  </section>
+
+  <section class="section community-admin-layout">
+    <div class="admin-form-box">
+      <form id="communityPostForm" class="admin-form">
+        <div class="form-group">
+          <label for="postTitle">Judul</label>
+          <input id="postTitle" type="text" maxlength="80" minlength="3" placeholder="Judul update" required />
+        </div>
+        <div class="form-group">
+          <label for="postBody">Cerita atau update</label>
+          <textarea id="postBody" maxlength="1000" minlength="2" rows="6" placeholder="Tulis update untuk komunitas..." required></textarea>
+        </div>
+        <p class="community-admin-status" id="communityAdminStatus" role="status" aria-live="polite"></p>
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary" id="publishCommunityPost">Terbitkan update</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="community-admin-feed">
+      <div class="section-head">
+        <h2>Postingan</h2>
+        <a href="/public/community.html" class="link-more" target="_blank" rel="noopener">Lihat halaman publik</a>
+      </div>
+      <div class="community-admin-list" id="communityAdminList" aria-live="polite">
+        <p class="section-desc">Memuat postingan...</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-bottom">
+      <p>© <span class="year"></span> Destroyer Community — Admin Panel</p>
+    </div>
+  </footer>
+
+  <script src="/public/js/config.js"></script>
+  <script src="/public/js/main.js"></script>
+  <script src="/public/js/api.js"></script>
+  <script src="/public/js/admin.js"></script>
+  <script src="/public/js/community-admin.js"></script>
+</body>
+</html>

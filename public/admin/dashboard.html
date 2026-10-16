@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard — Destroyer Admin</title>
+  <meta name="description" content="Admin dashboard Destroyer Community." />
+
+  <link rel="icon" href="/public/img/favicon.ico" />
+  <link rel="stylesheet" href="/public/css/style.css" />
+  <link rel="stylesheet" href="/public/css/animations.css" />
+  <link rel="stylesheet" href="/public/css/admin.css" />
+</head>
+<body class="page-admin">
+
+  <!-- ============ ADMIN NAVBAR ============ -->
+  <nav class="admin-nav">
+    <a href="/" class="nav-logo">
+      <img src="/public/img/logo.png" alt="Destroyer" />
+      <span class="nav-title">DESTROYER</span>
+      <span class="admin-badge">ADMIN</span>
+    </a>
+
+    <button class="nav-toggle" aria-label="Menu">☰</button>
+
+    <ul class="nav-links">
+      <li><a href="/admin/dashboard.html" class="active">Dashboard</a></li>
+      <li><a href="/admin/edit-profile.html">Edit Profil</a></li>
+      <li><a href="#" id="logoutBtn" class="nav-logout">Logout</a></li>
+    </ul>
+  </nav>
+
+  <!-- ============ PAGE HEADER ============ -->
+  <section class="page-header admin-header">
+    <h1>Dashboard</h1>
+    <p>Selamat datang, <span id="welcomeName">Admin</span> 👋</p>
+  </section>
+
+  <!-- ============ STATS ============ -->
+  <section class="section">
+    <h2>Statistik</h2>
+    <p class="section-desc">Ringkasan aktivitas kamu.</p>
+
+    <div class="grid admin-stats-grid" id="adminStatsGrid">
+      <div class="admin-stat-card">
+        <div class="admin-stat-icon">💬</div>
+        <div class="admin-stat-value" id="statComments">0</div>
+        <div class="admin-stat-label">Total Komentar</div>
+      </div>
+
+      <div class="admin-stat-card">
+        <div class="admin-stat-icon">👥</div>
+        <div class="admin-stat-value" id="statUsers">0</div>
+        <div class="admin-stat-label">Total User</div>
+      </div>
+
+      <div class="admin-stat-card">
+        <div class="admin-stat-icon">📅</div>
+        <div class="admin-stat-value" id="statDays">0</div>
+        <div class="admin-stat-label">Hari Aktif</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ QUICK ACTIONS ============ -->
+  <section class="section">
+    <h2>Aksi Cepat</h2>
+    <p class="section-desc">Yang paling sering dipakai.</p>
+
+    <div class="grid admin-actions-grid">
+      <a href="/admin/community.html" class="admin-action-card">
+        <div class="admin-action-icon">💬</div>
+        <h3>Kelola Community</h3>
+        <p>Terbitkan update komunitas</p>
+      </a>
+
+      <a href="/admin/edit-profile.html" class="admin-action-card">
+        <div class="admin-action-icon">✏️</div>
+        <h3>Edit Profil</h3>
+        <p>Ganti bio, sosmed, dll</p>
+      </a>
+
+      <a href="/" target="_blank" class="admin-action-card">
+        <div class="admin-action-icon">🌐</div>
+        <h3>Lihat Website</h3>
+        <p>Buka halaman publik</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- ============ KOMENTAR TERBARU ============ -->
+  <section class="section">
+    <div class="section-head">
+      <h2>Komentar Terbaru</h2>
+      <a href="/feedback.html" class="link-more" target="_blank">Lihat semua →</a>
+    </div>
+
+    <div class="admin-comment-list" id="recentComments">
+      <p class="section-desc">Loading...</p>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer>
+    <div class="footer-bottom">
+      <p>© <span class="year"></span> Destroyer Community — Admin Panel</p>
+    </div>
+  </footer>
+
+  <!-- ============ SCRIPTS ============ -->
+  <script src="/public/js/config.js"></script>
+  <script src="/public/js/main.js"></script>
+  <script src="/public/js/admin.js"></script>
+  <script src="/public/js/dashboard.js"></script>
+
+</body>
+</html>
