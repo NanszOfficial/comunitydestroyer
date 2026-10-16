@@ -1,0 +1,29 @@
+{
+  "name": "destroyer-community",
+  "version": "1.0.0",
+  "description": "Destroyer Community — Website komunitas gamer Roblox & Minecraft",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "gaming",
+    "community",
+    "roblox",
+    "minecraft",
+    "destroyer"
+  ],
+  "author": "Destroyer Community",
+  "license": "MIT",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.45.0",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
